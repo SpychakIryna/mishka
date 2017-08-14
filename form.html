@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+      document.createElement( "picture" );
+    </script>
+    <script src="js/vendors/picturefill.js" async></script>
+    <title>HTML Academy: Мишка</title>
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <header class="page-header  no-js">
+      <div class="container  clearfix">
+        <div class="logo">
+          <a class="logo__link" href="index.html">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+              <img class="logo__img" src="img/logo-mobile.svg" alt="Мишка">
+            </picture>
+          </a>
+        </div>
+        <button class="menu-toggle" type="button"></button>
+        <nav class="main-nav  main-nav--first">
+          <ul class="main-nav__list">
+            <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Каталог товаров</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="#">Вязание на заказ</a></li>
+          </ul>
+        </nav>
+        <nav class="main-nav  main-nav--second">
+          <ul class="main-nav__list">
+            <li class="main-nav__item"><a class="main-nav__link  main-nav__link--search" href="#">Поиск по сайту</a></li>
+            <li class="main-nav__item"><a class="main-nav__link  main-nav__link--cart" href="#">Корзина: пока пуста</a></li>
+          </ul>
+        </nav>
+        <nav class="main-nav  main-nav--third">
+          <ul class="main-nav__list">
+            <li class="main-nav__item"><a class="main-nav__link" href="#">Новые поступления</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="#">Распродажа</a></li>
+          </ul>
+        </nav>
+        <span class="page-header__delivery">Бесплатная доставка по России</span>
+      </div>
+    </header>
+    <main class="page-content">
+      <div class="page-content__header  page-content__header--form">
+        <h2 class="page-content__title  page-content__title--form">Вязание на заказ</h2>
+      </div>
+        <form class="form" action="https://echo.htmlacademy.ru" method="post">
+          <div  class="form__description"><p>Мы будем рады воплотить в жизнь ваши пожелания! <br>Заполните простую форму заказа, и мы свяжемся с вами, чтобы уточнить детали.
+          </p></div>
+          <fieldset class="form__block  form__block--type">
+            <div class="container">
+              <div class="form__title">Тип</div>
+              <div class="form__block-inner">
+                <input type="radio" id="form-interior" name="type" value="interior" checked>
+                <label class="form__label-name" for="form-interior">Аксессуары для интерьера</label>
+                <input type="radio" id="form-toy" name="type" value="toy">
+                <label class="form__label-name" for="form-toy">Детская игрушка</label>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="form__block  form__block--color">
+            <div class="container">
+              <div class="form__title">Цвет</div>
+              <div class="form__block-inner">
+                <input type="checkbox" id="form-white" name="white" checked>
+                <label class="form__label-name" for="form-white">Белый</label>
+                <input type="checkbox" id="form-grey" name="grey" checked>
+                <label class="form__label-name" for="form-grey">Серый</label>
+                <input type="checkbox" id="form-Tiffany" name="Tiffany">
+                <label class="form__label-name" for="form-Tiffany">"Тиффани"</label>
+                <input type="checkbox" id="form-black" name="black">
+                <label class="form__label-name" for="form-black">Черный</label>
+                <input type="checkbox" id="form-pink" name="pink">
+                <label class="form__label-name" for="form-pink">Розовый</label>
+                <input type="checkbox" id="form-orange" name="orange">
+                <label class="form__label-name" for="form-orange">Оранжевый</label>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="form__block  form__block--name">
+            <div class="container">
+              <div class="form__title">ФИО</div>
+                <div class="form__block-inner">
+                  <div class="form-field">
+                    <label class="form__label-name" for="form-surname">Фамилия:</label><input type="text" id="form-surname" name="surname" placeholder="Укажите фамилию">
+                  </div>
+                  <div class="form-field">
+                    <label class="form__label-name" for="form-name">Имя:</label><input type="text" id="form-name" name="name" placeholder="Введите ваше имя">
+                  </div>
+                  <div class="form-field">
+                    <label class="form__label-name" for="form-second-name">Отчество:</label><input type="text" id="form-second-name" name="second-name" placeholder="Отчество, если желаете">
+                  </div>
+                </div>
+              </div>
+          </fieldset>
+          <fieldset class="form__block  form__block--tel">
+            <div class="container">
+              <div class="form__title">ТЕЛ</div>
+              <div class="form__block-inner  form__block-inner--tel">
+                <input type="tel" id="form-tel" pattern="" placeholder="+7 XXX XX XX">
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="form__block  form__block--mail">
+            <div class="container">
+              <div class="form__title">E-MAIL</div>
+              <div class="form__block-inner  form__block-inner--mail">
+                <input type="email" id="form-email" placeholder="Ваш e-mail">
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="form__block  form__block--mess  clearfix">
+            <div class="container">
+              <div class="form__title">ДОП</div>
+              <div class="form__block-inner">
+                <textarea class="form-message" name="user-comment" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+              </div>
+            </div>
+          </fieldset>
+          <div class="form-booking">
+            <input class="btn  btn--booking-form" type="submit" value="Отправить заказ">
+            <div class="form__note">Все поля являются обязательными</div>
+          </div>
+        </form>
+    </main>
+    <footer class="page-footer">
+      <section class="page-footer__down">
+        <div class="container">
+          <div class="logo-footer">
+            <a class="logo-footer__link" href="#"></a>
+          </div>
+          <div class="page-footer-social">
+            <div class="social-links">
+              <a class="social-link  social-link--in" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
+              <a class="social-link  social-link--fb" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+              <a class="social-link  social-link--tw" href="https://vk.com/htmlacademy">Мы в Твиттере</a>
+            </div>
+          </div>
+          <div class="page-footer-copyright">
+            <a class="page-footer-copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+              <p class="page-footer-copyright__info">Разработано</p>HTML-Academy<svg class="academy-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
+              <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.473,8.017l13.43-7.99l0.042-0.025V1.412L13.62,0.017z M25.019,12.127L13.495,5.334  L13.494,5.23l-0.087,0.05l-0.088-0.056v0.109L1.925,12.118V3.147l11.548-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5  l-4.479,2.64l-7.093-4.221l-0.014,1.415l5.904,3.513l-0.86,0.507l-5.03-2.992l-0.014,1.415l3.827,2.275l-0.782,0.523l-3.031-1.787  l-0.014,1.413l1.853,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.016,1.044L5.41,18.234L5.395,19.65  l7.979,4.795l0.018,1.076l-7.973-4.74l-0.013,1.414l8.021,4.822l0.046,0.025l8.143-4.872l-0.011-5.177l3.415-2.036v10.021  L13.472,31.85L1.925,24.979V15.127z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <script src="js/menu-opened.js"></script>
+  </body>
+</html>
